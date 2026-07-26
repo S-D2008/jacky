@@ -1,12 +1,18 @@
 {
   "name": "jacky",
-  "module": "index.ts",
+  "module": "index.js",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun --watch run index.js"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
