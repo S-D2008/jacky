@@ -5,21 +5,21 @@ import { validateUser } from '../../middleware/validate-user/index.js';
 const router = Router();
 
 // path: /user/create
-router.post('/create', (req, res) => {
-  console.log("Received request body:", req.body);
-  const { name, email } = req.body;
-  if (!name || !email) {
-    return res.status(400).send("Name and email are required");
-  }
+// router.post('/create', (req, res) => {
+//   console.log("Received request body:", req.body);
+//   const { name, email } = req.body;
+//   if (!name || !email) {
+//     return res.status(400).send("Name and email are required");
+//   }
 
-  try {
-    const stmt = db.query("INSERT INTO users (name, email) VALUES (?, ?)");
-    stmt.run(name, email);
-    res.status(201).send("User created successfully");
-  } catch (error) {
-    res.status(500).send("Error creating user");
-  }
-});
+//   try {
+//     const stmt = db.query("INSERT INTO users (name, email) VALUES (?, ?)");
+//     stmt.run(name, email);
+//     res.status(201).send("User created successfully");
+//   } catch (error) {
+//     res.status(500).send("Error creating user");
+//   }
+// });
 
 // path : /user/users
 router.get("/users", validateUser, (req, res) => {

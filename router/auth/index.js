@@ -8,6 +8,8 @@ dotenv.config();
 
 const router = Router();
 
+// method: post
+// path: /auth/signup
 router.post("/signup", async (req, res) => {
     const { name, email, password } = req.body;
     if (!name || !email || !password) {
@@ -20,18 +22,18 @@ router.post("/signup", async (req, res) => {
             return res.status(409).send("User already exists");
         }
 
-        const salt = process.env.AUTH_SALT || await bcrypt.genSalt(10); // Use the salt from .env or generate a new one as fallback
-        const secPass = await bcrypt.hash(req.body.password, salt);
-
+        const secPass = await bcrypt.hash(req.body.password, 10);
+        
         // insert new user into the database
         db.prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)").run(name, email, secPass);
         // return res.status(201).send("User created successfully");
-
+        
         // generate JWT token
         const token = jwt.sign({ email }, process.env.AUTH_SALT, { expiresIn: '1h' });
         
         return res.status(201).json({ token });
     } catch (error) {
+        console.log(error)
         return res.status(500).send("Error checking existing user");
     }
 });
