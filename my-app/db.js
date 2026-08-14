@@ -1,4 +1,4 @@
-import Database from "better-sqlite";
+import { Database } from "bun:sqlite";
 
 const db = new Database("users.db");
 
