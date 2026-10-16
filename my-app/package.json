@@ -1,0 +1,15 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun --watch server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "better-sqlite3": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  }
+}

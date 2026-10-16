@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Log in</title>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex" id="body">
+  <div class="flex flex-col justify-center min-h-screen mx-auto my-auto">
+    <div class="flex border items-center rounded-lg p-[1rem]">
+      <form id="loginForm">
+        <div>
+          <div class="flex items-center justify-center p-[1rem] gap-[0.3rem]">
+            <h1 class="font-bold font-2xl">
+              Hi, Welcome Back!
+            </h1>
+              <div class="flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 128"><!-- Icon from Noto Emoji by Google Inc - https://github.com/googlefonts/noto-emoji/blob/main/svg/LICENSE --><path fill="#FFCA28" d="M93.3 60c.2.3.7.1.7-.2c.6-5.4 2.2-20.3 12.8-23.5c3.4-1 6.8 1.4 7.2 4.5c.7 5-5 17.9-4.5 29.7c.1 1.9 3.3 22-5.2 33.9s-28.7 24-48.8 5.6c-10.4-9.5-10.4-13.3-23.3-26.6c-2.6-2.6-13-14-15.8-17.5c-3.7-4.7 2.2-10.9 6.7-7.7c2.1 1.5 20.7 17.1 21.4 17.8c1.4 1.2 3.1-.5 2.1-1.7c-11.4-15-22.4-28.5-25.4-33.7s4.2-10.8 8.4-6.3c2.9 3 24.4 28.1 25.4 29.2s2.7-.3 2.1-1.7c-.7-1.3-18.1-31.6-21.2-38.5c-2.7-6.1 6.3-11.8 10.5-5.5c3.4 5 22.4 36.6 23.1 37.7c.9 1.6 2.9.6 2.1-1.2C71 53 59.3 21 58.4 17.7c-1.6-5.8 6.7-10.6 10.6-4c5.3 9.1 15.8 36.9 24.3 46.3"/><defs><path id="SVGTXYnub2S" d="M93.3 60c.2.3.7.1.7-.2c.6-5.4 2.2-20.3 12.8-23.5c3.4-1 6.8 1.4 7.2 4.5c.7 5-5 17.9-4.5 29.7c.1 1.9 3.3 22-5.2 33.9s-28.7 24-48.8 5.6c-10.4-9.5-10.4-13.3-23.3-26.6c-2.6-2.6-13-14-15.8-17.5c-3.7-4.7 2.2-10.9 6.7-7.7c2.1 1.5 20.7 17.1 21.4 17.8c1.4 1.2 3.1-.5 2.1-1.7c-11.4-15-22.4-28.5-25.4-33.7s4.2-10.8 8.4-6.3c2.9 3 24.4 28.1 25.4 29.2s2.7-.3 2.1-1.7c-.7-1.3-18.1-31.6-21.2-38.5c-2.7-6.1 6.3-11.8 10.5-5.5c3.4 5 22.4 36.6 23.1 37.7c.9 1.6 2.9.6 2.1-1.2C71 53 59.3 21 58.4 17.7c-1.6-5.8 6.7-10.6 10.6-4c5.3 9.1 15.8 36.9 24.3 46.3"/></defs><clipPath id="SVGOde5adtf"><use href="#SVGTXYnub2S"/></clipPath><g fill="#FAA700" clip-path="url(#SVGOde5adtf)"><path d="M91.2 60.2c-12.4 10.1-17.9 24.5-7.7 39.5c.9 1.3 2.8.1 2-1.4c-4.2-7.5-7.3-21 7.2-35.1c1.7.8 3.7-.9 3.8-2.4c1.1-9.4 2.2-17.2 9.2-21.6c2.7-1.7 6.2-.5 6.4 3.6c0 0 2.2.2 3.1.3c.5-2.1 1.5-5.9 1.5-6s-11.8-4.5-11.8-4.5L94.6 42.8zm-20-4.1c1.4-.7 2.6-1.8 2-3.3c-.6-1.6-11.7-31.8-12.4-34.1c-1.4-4.2 2.1-7.5 5.2-6.1c1.7.8 2.5-1.9 1.6-2.3s-3-2.3-7.2-.2c-7.5 3.8-3.1 12.2-1.1 17.1s11.9 28.9 11.9 28.9m-14.5 7.5c1.7-1.2 3-2.2 1.5-4.6c-1-1.6-17.9-32.3-19.6-35.3c-2.5-4.3 2.7-8.1 5.6-5.4c1.3 1.2 3.3-1.4 2.3-2.4s-4.5-3.9-8.9-1s-4.5 6.4-3.9 7.9c.5 1.5 23 40.8 23 40.8m-10 12.3c1.2-1.8 2-2.7.3-5S25.1 42.2 24 40.7c-2.8-3.7 1.3-6.9 3.3-5.8c1.9 1.1 3-2 1.4-2.8s-4.2-1.7-6.6 0s-3.8 5.2-3.4 7.2c.3 2 28 36.6 28 36.6"/><path d="M92.8 113.6c-16.2 7.7-28.3 1.7-36.1-5.9c-8.9-8.7-13.1-16.7-19-22.1c-2-1.9-17.8-18.7-19.7-21.6c-1.5-2.4 1.5-6.5 4.8-4.2c2.1 1.4 3.1-1.6 1.7-2.4s-4.5-2.5-7.8 0c-3.3 2.4-3.4 6.7-2.6 8.1s49.4 57.2 49.4 57.2l19.8-.5l10.6-6.5z"/></g><defs><use href="#SVGTXYnub2S" id="SVGdNmDqbHG"/></defs><clipPath id="SVG4O03hchm"><use href="#SVGdNmDqbHG"/></clipPath><g fill="#B55E19" clip-path="url(#SVG4O03hchm)"><path d="M111.5 36c.5 1.3 1.1 3.6.5 6.7c-2.3 11.6-6.1 18.4-4.9 30.9c2.2 24-6.2 42.2-35.1 45.8c-2.9.4-2.1 2.6-.6 2.4c.7-.1 21.3-3.8 21.3-3.8s19.1-16.3 19.1-16.5s4.8-62.4 4.8-62.4zm-50-25.5c1.3.2 4.1 1.3 6.1 5.2s11.8 26.4 13.1 28.8s6.6 14.3 10.9 17.9c1.4 1.1 2.1-.8 2.1-.8l.1-3.1L70.6 5.7l-7.7.3zm9.7 45.6c-1.9.9-3.3 1.7-4.7-.5C65.6 54 55.9 37.4 43.7 18c-1-1.5-3.3-2.8-5.1-2.1c-1.8.8-2.2-1.5-1.3-2s6.5-3.6 10.3 2.8s23.6 39.4 23.6 39.4m-14.5 7.5c-1.5 1.1-3 2.5-4.9.2c-1.8-2.2-22.3-26.6-23.5-28.1s-3.7-2.8-5.6-1.6c-1.3.8-2.5-1.6-1.7-2.2s5.3-4.6 8.3-1.2s27.4 32.9 27.4 32.9m-10 12.3c-1.3 1.4-2.7 2.2-4.6.8S23.2 61 22.1 60s-4.3-2.5-6.7-.1c-.9.9-2.5-.6-1.6-1.5c.9-1 5.8-6 9.7-2.7s23.2 20.2 23.2 20.2"/></g><path fill="#B0BEC5" d="M10.6 81.3c3.1 9.2 7.8 14.9 15.5 20.1c1.4 1 .6 3-1 2.3c-7.2-2.9-15.2-9.3-17.1-22c-.3-1.7 2.1-2 2.6-.4m6-5.5c3.1 9.2 7.8 14.9 15.5 20.1c1.4 1 .6 3-1 2.3c-7.2-2.9-15.2-9.3-17.1-22c-.2-1.7 2.1-2 2.6-.4m76.9-41.2c-2.4-9.4-6.8-15.4-14.1-21c-1.4-1-.4-3 1.2-2.3c7 3.3 14.6 10.3 15.6 23.1c.1 1.7-2.3 1.9-2.7.2m6.5-4.8c-2.4-9.4-6.8-15.4-14.1-21c-1.4-1-.4-3 1.2-2.3c7 3.3 14.6 10.3 15.6 23.1c.1 1.6-2.2 1.8-2.7.2"/></svg>
+              </div>
+            </h1>
+          </div>
+          <div>
+            <div>
+                 <div> <label for="email">Email</label> </div>
+                 <div> <input type="email" placeholder="Enter your email" class="p-2 px-[3.3rem] my-2 rounded-md appearance-none outline-1 outline-gray-300 focus:outline-2 focus:outline-blue-600 focus:outline-offset-2"></div>
+            </div>
+            <div>
+              <div> <label>Password</label> </div>
+              <div> <input type="password" id="password" name="password" placeholder="Enter your password" class="p-2 px-[1.6rem] my-2 rounded-md appearance-none outline-1 outline-gray-300 focus:outline-2 focus:outline-blue-600 focus:outline-offset-2 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:outline-red-500 disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none dark:disabled:border-gray-700 dark:disabled:bg-gray-800/201 placeholder-gray-400 p-1 rounded-md w-full"></div>
+            </div>
+          </div>
+          <div class="flex justify-between my-[1rem]">
+            <div class="flex items-center gap-2">
+                <div> <input type="checkbox" class="flex"> </div>
+                <div> <label>Remember me</label></div>
+             </div>
+            <div class="text-blue-500"><a href="#">Forgot password?</a></div>
+          </div>
+        <div>
+          <button class="flex py-2 bg-blue-500 px-[7.5rem] rounded-md">Log in</button>
+        </div>
+          <div class="flex py-[2rem] justify-center">———————or with———————</div>
+        <div class="flex flex-col -my-[1rem]">
+            <button class="flex items-center gap-4 rounded-md bg-blue-500 my-2 py-[0.5rem] p-2 ">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                width="32" 
+                height="32" 
+                viewBox="0 0 256 256"
+                ><!-- Icon from SVG Logos by Gil Barbara - https://raw.githubusercontent.com/gilbarbara/logos/master/LICENSE.txt -->
+                <path 
+                  opacity=10%
+                  fill="#1877f2" d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/>
+                <path fill="#fff" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"/>
+              </svg>
+              Login with Facebook
+            </button>
+          <button class="flex border items-center gap-4 rounded-md my-[1rem] py-[0.5rem] p-2">
+                      <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                 width="31.27" 
+                 height="32"
+                  viewBox="0 0 256 262">
+                  <!-- Icon from SVG Logos by Gil Barbara - https://raw.githubusercontent.com/gilbarbara/logos/master/LICENSE.txt -->
+                   <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"/><path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"/><path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z"/><path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"/></svg>
+            Login with Google
+          </button>
+        </div>
+          <div class="flex justify-center gap-5 my-[1rem] mt-[2rem]">
+            <span>Don't have an account?</span>
+            <a href="signup.html" class="text-blue-500 font-bold">Sign Up</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<!-- <script>
+const bodyelm = document.getElementById("body");
+      const loginForm = document.getElementById("loginForm");
+      const loginBtn = loginForm.querySelector("#loginBtn");
+      const loginError = loginForm.querySelector("#loginError");
+      const loginBtnContent = structuredClone(loginBtn.innerHTML);
+const passwordInput = document.getElementById("password");
+      const username = document.getElementById("username");
+loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        loginBtn.disabled = true;
+        loginBtn.style.display = "flex";
+        loginBtn.style.justifyContent = "center";
+        loginBtn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt --><!--<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="16" stroke-dashoffset="16" d="M12 3c4.97 0 9 4.03 9 9"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="16;0"/><animateTransform attributeName="transform" dur="0.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path><path stroke-dasharray="64" stroke-dashoffset="64" stroke-opacity=".3" d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="64;0"/></path></g></svg>
+        setTimeout(() => {
+          if (loginPassword.value.length < 8) {
+            loginError.innerHTML = "Password should atleast be 8 characters";
+            loginError.style.display = "unset";
+          } else {
+            loginError.innerHTML = "Invalid credentials";
+            loginError.style.display = "unset";
+          }
+          loginBtn.innerHTML = loginBtnContent;
+          loginBtn.disabled = false;
+        }, 2000);
+      });
+      passwordEye.addEventListener("click", (e) => {
+        e.preventDefault();
+        passwordEye.style.display = "none";
+        passwordCloseEye.style.display = "unset";
+        password.setAttribute("type", "text");
+      });
+      passwordCloseEye.addEventListener("click", (e) => {
+        e.preventDefault();
+        passwordCloseEye.style.display = "none";
+        passwordEye.style.display = "unset";
+        password.setAttribute("type", "password");
+      });
+</script> -->
+<script src="app.js">
+const loginForm = document.getElementById("loginForm");
+const loginBtn = document.getElementById("loginBtn");
+const loginError = document.getElementById("loginError");
+const loginBtnContent = structuredClone(loginBtn.innerHTML);
+
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  loginBtn.disabled = true;
+  loginBtn.innerHTML = `<svg ...spinner...></svg>`; // keep your spinner
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const res = await fetch("/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      localStorage.setItem("token", data.token); // save JWT
+      loginError.style.display = "none";
+      alert("Login successful!");
+      // optionally redirect:
+      // window.location.href = "/dashboard.html";
+    } else {
+      loginError.innerText = data.message || "Invalid credentials";
+      loginError.style.display = "block";
+    }
+  } catch (err) {
+    console.error(err);
+    loginError.innerText = "Something went wrong";
+    loginError.style.display = "block";
+  } finally {
+    loginBtn.innerHTML = loginBtnContent;
+    loginBtn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
